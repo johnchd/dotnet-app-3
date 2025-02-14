@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "/X7+rf2jMGTWe25iZNjhPiiM4I2LkfkE1l2YQRyIwrA=",
+  "Source": "dotnet-app-3",
+  "BasePath": "_content/dotnet-app-3",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
