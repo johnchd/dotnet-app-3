@@ -80,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3/dotnet-app-3.csproj",
+      "projectUniqueName": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/dotnet-app-3.csproj",
       "projectName": "dotnet-app-3",
-      "projectPath": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3/dotnet-app-3.csproj",
+      "projectPath": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/dotnet-app-3.csproj",
       "packagesPath": "/Users/johncrynick/.nuget/packages/",
-      "outputPath": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3/obj/",
+      "outputPath": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/johncrynick/.nuget/NuGet/NuGet.Config"
