@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
 
 namespace dotnet_app_3.Controllers
@@ -9,35 +10,46 @@ namespace dotnet_app_3.Controllers
     public class BffController : ControllerBase
     {
         private readonly HttpClient _httpClient;
+        private const string SecretHeader = "X-Secret-Key";
+        private const string SecretValue = "test"; // Must match middleware
 
         public BffController(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
-        // GET: /bff/products (Fetch all products)
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-            var response = await _httpClient.GetAsync("http://localhost:5250/api/products");
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5250/api/products");
+            request.Headers.Add(SecretHeader, SecretValue);
+
+            var response = await _httpClient.SendAsync(request);
             var data = await response.Content.ReadAsStringAsync();
             return Content(data, "application/json");
         }
 
-        // POST: /bff/products (Add a product)
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody] object productRequest)
         {
-            var response = await _httpClient.PostAsJsonAsync("http://localhost:5250/api/products", productRequest);
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:5250/api/products")
+            {
+                Content = JsonContent.Create(productRequest)
+            };
+            request.Headers.Add(SecretHeader, SecretValue);
+
+            var response = await _httpClient.SendAsync(request);
             var data = await response.Content.ReadAsStringAsync();
             return Content(data, "application/json");
         }
 
-        // DELETE: /bff/products/{productName} (Delete a product)
         [HttpDelete("{productName}")]
         public async Task<IActionResult> DeleteProduct(string productName)
         {
-            var response = await _httpClient.DeleteAsync($"http://localhost:5250/api/products/{productName}");
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"http://localhost:5250/api/products/{productName}");
+            request.Headers.Add(SecretHeader, SecretValue);
+
+            var response = await _httpClient.SendAsync(request);
             var data = await response.Content.ReadAsStringAsync();
             return Content(data, "application/json");
         }

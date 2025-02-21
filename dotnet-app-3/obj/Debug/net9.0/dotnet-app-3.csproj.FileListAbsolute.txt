@@ -66,4 +66,4 @@
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/dotnet-app-3.genruntimeconfig.cache
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/ref/dotnet-app-3.dll
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/dotnet-app-3.staticwebassets.runtime.json
-/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-8duxh4ifd3.gz
