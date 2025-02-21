@@ -1,12 +1,362 @@
 {
   "Version": 1,
-  "Hash": "/X7+rf2jMGTWe25iZNjhPiiM4I2LkfkE1l2YQRyIwrA=",
+  "Hash": "IfJqrl97sgujhOKxy7gS7oB7na2Mos3tI6ob4YsqYU8=",
   "Source": "dotnet-app-3",
   "BasePath": "_content/dotnet-app-3",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "dotnet-app-3/wwwroot",
+      "Source": "dotnet-app-3",
+      "ContentRoot": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/",
+      "BasePath": "_content/dotnet-app-3",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz",
+      "SourceId": "dotnet-app-3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/dotnet-app-3",
+      "RelativePath": "index#[.{fingerprint=9gdi6zq45x}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "f820j5tr57",
+      "Integrity": "T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html",
+      "SourceId": "dotnet-app-3",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/",
+      "BasePath": "_content/dotnet-app-3",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9gdi6zq45x",
+      "Integrity": "meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.9gdi6zq45x.html",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000999000999"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9gdi6zq45x"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo="
+        }
+      ]
+    },
+    {
+      "Route": "index.9gdi6zq45x.html",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9gdi6zq45x"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo="
+        }
+      ]
+    },
+    {
+      "Route": "index.9gdi6zq45x.html.gz",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9gdi6zq45x"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000999000999"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2866"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-meYUmiAem8pcvedxjoqRizzk0gFuo/ILUkOR1+Mmvwo="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/v3qgge4sre-9gdi6zq45x.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 16:41:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T8KSa7mLP1hSIkHTCMPSh5wQvPsZye889cBZGqHjwk8="
+        }
+      ]
+    }
+  ]
 }

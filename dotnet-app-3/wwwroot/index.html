@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <ul id="productList"></ul>
+    
+    <input type="text" id="productName" placeholder="Enter product name">
+    <button onclick="addProduct()">Add Product</button>
+
+    <script>
+        const apiUrl = "http://localhost:5250/bff/products"; // BFF API URL
+
+        async function loadProducts() {
+            console.log("Fetching products...");
+
+            try {
+                const response = await fetch(apiUrl);
+                console.log("Response status:", response.status);
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const products = await response.json();
+                console.log("Products received:", products);
+
+                const productList = document.getElementById("productList");
+                if (!productList) {
+                    console.error("Error: productList element not found.");
+                    return;
+                }
+
+                productList.innerHTML = ""; // Clear old list
+
+                products.forEach(product => {
+                    const li = document.createElement("li");
+                    li.textContent = product;
+
+                    const deleteBtn = document.createElement("button");
+                    deleteBtn.textContent = "X";
+                    deleteBtn.style.marginLeft = "10px";
+                    deleteBtn.onclick = () => deleteProduct(product);
+
+                    li.appendChild(deleteBtn);
+                    productList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            }
+        }
+
+        async function addProduct() {
+            const productName = document.getElementById("productName").value.trim();
+            if (!productName) {
+                alert("Enter a product name.");
+                return;
+            }
+
+            await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ProductName: productName })
+            });
+
+            document.getElementById("productName").value = "";
+            loadProducts(); // Refresh product list
+        }
+
+        async function deleteProduct(productName) {
+            await fetch(`${apiUrl}/${productName}`, {
+                method: "DELETE"
+            });
+
+            loadProducts(); // Refresh product list
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            loadProducts(); // Ensure the script runs after the page loads
+        });
+    </script>
+</body>
+</html>
