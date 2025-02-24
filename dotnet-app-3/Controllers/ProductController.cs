@@ -52,5 +52,12 @@ namespace dotnet_app_3.Controllers
 
             return Ok(new { message = $"Product '{productName}' deleted successfully!" });
         }
+        // only available via EP /api/products/secret WITH secret key
+        [HttpGet("secret")]
+        public IActionResult GetSecret()
+        {
+            return Ok(new { message = "secret only available to BFF" });
+        }
+
     }
 }
