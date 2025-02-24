@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/index.html"
     },
     {
+      "Id": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/search.html",
+      "PackagePath": "staticwebassets/search.html"
+    },
+    {
       "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.dotnet-app-3.props",
       "PackagePath": "build\\dotnet-app-3.props"
     },
