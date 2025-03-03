@@ -4,8 +4,6 @@
     <title>Search Engine</title>
 </head>
 
-<!-- a poc for xss via htmli -->
-
 <body>
     <h1>Search Engine</h1>
 
@@ -15,11 +13,8 @@
     </form>
 
     <script>
-        // extract query string so everything after ?
         const params = new URLSearchParams(window.location.search);
-        // get value of search
         const query123 = params.get("search");
-        // puts value of search into output
         document.write('<h5> Search results: </h5>'+ query123);
     </script>
 </body>

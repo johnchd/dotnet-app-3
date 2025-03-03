@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/feedback.html",
+      "PackagePath": "staticwebassets/feedback.html"
+    },
+    {
       "Id": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/products.html",
+      "PackagePath": "staticwebassets/products.html"
     },
     {
       "Id": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/wwwroot/search.html",

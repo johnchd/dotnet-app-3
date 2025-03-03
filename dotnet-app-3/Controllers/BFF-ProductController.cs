@@ -7,13 +7,13 @@ namespace dotnet_app_3.Controllers
 {
     [ApiController]
     [Route("bff/products")]
-    public class BffController : ControllerBase
+    public class BFFProductController : ControllerBase
     {
         private readonly HttpClient _httpClient;
         private const string SecretHeader = "X-Secret-Key";
         private const string SecretValue = "test"; // Must match middleware
 
-        public BffController(HttpClient httpClient)
+        public BFFProductController(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

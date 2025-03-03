@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Got feedback?</h1>
+
+    <form id="feedbackForm">
+        <label>Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label>Comment:</label>
+        <textarea id="comment"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            let name = document.getElementById("name").value;
+            let comment = document.getElementById("comment").value;
+            window.location.href = `http://localhost:5250/bff/feedback/submit?name=${encodeURIComponent(name)}&comment=${encodeURIComponent(comment)}`;
+        });
+    </script>
+
+</body>
+</html>
