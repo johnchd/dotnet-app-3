@@ -2,12 +2,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
+
+// env var
+var apiRoot = builder.Configuration["APIROOT"] ?? "http://localhost:5250";
 
 
 var app = builder.Build();
