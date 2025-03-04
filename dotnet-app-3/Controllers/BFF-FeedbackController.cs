@@ -9,19 +9,26 @@ namespace dotnet_app_3.Controllers
     [Route("bff/feedback")]
     public class BFFFeedbackController : ControllerBase
     {
+
+        //  "APIROOT": "http://host.docker.internal:5250"
+
+
         private readonly HttpClient _httpClient;
+        private readonly string _APIROOT;
+
         private const string SecretHeader = "X-Secret-Key";
         private const string SecretValue = "test"; // Must match middleware
 
-        public BFFFeedbackController(HttpClient httpClient)
+        public BFFFeedbackController(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
+            _APIROOT = configuration["APIROOT"];
         }
 
         [HttpGet("submit")]
         public async Task<IActionResult> SubmitFeedback([FromQuery] string name, [FromQuery] string comment)
         {
-            string backendUrl = $"http://localhost:5250/api/feedback/submit?name={Uri.EscapeDataString(name)}&comment={Uri.EscapeDataString(comment)}";
+            string backendUrl = $"{_APIROOT}/api/feedback/submit?name={Uri.EscapeDataString(name)}&comment={Uri.EscapeDataString(comment)}";
 
             var request = new HttpRequestMessage(HttpMethod.Get, backendUrl);
             request.Headers.Add(SecretHeader, SecretValue);

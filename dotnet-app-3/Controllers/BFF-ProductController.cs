@@ -10,18 +10,21 @@ namespace dotnet_app_3.Controllers
     public class BFFProductController : ControllerBase
     {
         private readonly HttpClient _httpClient;
+        private readonly string _APIROOT;
+
         private const string SecretHeader = "X-Secret-Key";
         private const string SecretValue = "test"; // Must match middleware
 
-        public BFFProductController(HttpClient httpClient)
+        public BFFProductController(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
+            _APIROOT = configuration["APIROOT"];
         }
 
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5250/api/products");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{_APIROOT}/api/products");
             request.Headers.Add(SecretHeader, SecretValue);
 
             var response = await _httpClient.SendAsync(request);
@@ -32,7 +35,7 @@ namespace dotnet_app_3.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody] object productRequest)
         {
-            var request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:5250/api/products")
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{_APIROOT}/api/products")
             {
                 Content = JsonContent.Create(productRequest)
             };
@@ -46,7 +49,7 @@ namespace dotnet_app_3.Controllers
         [HttpDelete("{productName}")]
         public async Task<IActionResult> DeleteProduct(string productName)
         {
-            var request = new HttpRequestMessage(HttpMethod.Delete, $"http://localhost:5250/api/products/{productName}");
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"{_APIROOT}/api/products/{productName}");
             request.Headers.Add(SecretHeader, SecretValue);
 
             var response = await _httpClient.SendAsync(request);

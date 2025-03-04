@@ -70,3 +70,6 @@
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/gw5w7fvjsd-snd8agpf80.gz
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/g118ug5362-2iukaee7gc.gz
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/obj/Debug/net9.0/compressed/bg2qeof2qn-6gt67ypo97.gz
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll

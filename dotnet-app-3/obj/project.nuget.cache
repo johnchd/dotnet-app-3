@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Wuzv3RjpiWY=",
+  "dgSpecHash": "kEJV8I1FJzs=",
   "success": true,
   "projectFilePath": "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/dotnet-app-3.csproj",
   "expectedPackageFiles": [
     "/Users/johncrynick/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "/Users/johncrynick/.nuget/packages/microsoft.extensions.configuration/9.0.2/microsoft.extensions.configuration.9.0.2.nupkg.sha512",
+    "/Users/johncrynick/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.2/microsoft.extensions.configuration.abstractions.9.0.2.nupkg.sha512",
+    "/Users/johncrynick/.nuget/packages/microsoft.extensions.primitives/9.0.2/microsoft.extensions.primitives.9.0.2.nupkg.sha512",
     "/Users/johncrynick/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
   ],
   "logs": []
