@@ -1,7 +1,7 @@
-#!/bin/bash
-docker rm -f dotnet-app-3
-docker build -t dotnet-app-3 .
-docker run -it --name dotnet-app-3 -p 5250:8080 dotnet-app-3
+app_name='testconfig'
 
-# Run locally:
-# APIROOT=http://localhost:5250 dotnet run
+docker stop $app_name
+docker remove $app_name
+docker image remove $app_name
+docker build -t $app_name .
+docker run -it --name $app_name -p 5250:8080 $app_name -e "env=http://host.docker.internal:5250"

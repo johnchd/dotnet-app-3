@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\feedback.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"840"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Mar 2025 14:54:19 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"840"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 15:18:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/dotnet-app-3/feedback.snd8agpf80.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\feedback.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"snd8agpf80"},{"Name":"integrity","Value":"sha256-2C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8="},{"Name":"label","Value":"_content/dotnet-app-3/feedback.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"840"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Mar 2025 14:54:19 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"840"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00222C5ZkCVIgXSH\u002BtVfbmnL30g3d0v7z461kfkF\u002Bd1QfE8=\u0022"},{"Name":"Last-Modified","Value":"Wed, 05 Mar 2025 15:18:44 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/dotnet-app-3/index.athwcropnm.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>

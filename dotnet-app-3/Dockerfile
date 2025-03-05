@@ -15,11 +15,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Set the APIROOT environment variable for Docker
-ENV APIROOT=http://host.docker.internal:5250
-
-# Expose the port the app listens on (default is 80)
-EXPOSE 5250
-
 # Start the app
 ENTRYPOINT ["dotnet", "dotnet-app-3.dll"]
