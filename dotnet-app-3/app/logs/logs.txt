@@ -1,0 +1,5 @@
+2025-03-13 12:55:02.166 -04:00 [Information] Now listening on: "http://localhost:5250"
+2025-03-13 12:55:02.214 -04:00 [Information] Application started. Press Ctrl+C to shut down.
+2025-03-13 12:55:02.215 -04:00 [Information] Hosting environment: "Development"
+2025-03-13 12:55:02.215 -04:00 [Information] Content root path: "/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3"
+2025-03-13 12:55:20.849 -04:00 [Information] Application is shutting down...

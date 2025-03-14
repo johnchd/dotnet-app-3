@@ -1,8 +1,60 @@
-var builder = WebApplication.CreateBuilder(args);
+using Serilog; // serilog
+using System; // serilog
+using System.IO; // serilog
+using Serilog.Formatting.Json; // serilog
+
+
+
+var builder = WebApplication.CreateBuilder(args); // main
+
 
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();
+
+// serilog
+var logDirectory = "/tmp/logs";
+if (!Directory.Exists(logDirectory))
+{
+    Directory.CreateDirectory(logDirectory);
+}
+// iteration 1 - basic
+// Log.Logger = new LoggerConfiguration()
+//     // .WriteTo.Console()
+//     .WriteTo.File(Path.Combine(logDirectory, "logs.txt"), rollingInterval: RollingInterval.Infinite) // 
+//     .Enrich.FromLogContext()
+//     .CreateLogger();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()  // Logs to console
+    .WriteTo.File(
+        Path.Combine(logDirectory, "logs-.txt"),
+        rollingInterval: RollingInterval.Day,
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}"
+    )
+    .WriteTo.File(
+        new JsonFormatter(), 
+        Path.Combine(logDirectory, "logs-.json"), 
+        rollingInterval: RollingInterval.Day 
+    )
+    .Enrich.FromLogContext()
+    .Enrich.WithProperty("Application", "dotnet-app-3") // Add application name
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName) // Add environment
+    .MinimumLevel.Information() 
+    .Filter.ByExcluding(log => log.MessageTemplate.Text.Contains("/favicon.ico")) // Ignore favicon.ico requests
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+// var appSerilog = builder.Build();
+var app = builder.Build();
+
+app.UseSerilogRequestLogging(); // Logs HTTP requests
+
+
+
+// builder.Services.AddOpenApi();
+// builder.Services.AddControllers();
+// builder.Services.AddHttpClient();
 
 
 // env var - local vs docker
@@ -12,7 +64,7 @@ IConfigurationRoot configurationRoot = new ConfigurationBuilder()
 .Build();
 
 
-var app = builder.Build();
+// var app = builder.Build(); // had to move up bc of serilog
 
 app.UseDefaultFiles();
 app.UseStaticFiles();

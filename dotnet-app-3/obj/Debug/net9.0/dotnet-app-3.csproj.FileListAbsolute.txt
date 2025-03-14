@@ -73,3 +73,15 @@
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.Seq.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/app/logs/logs.json
