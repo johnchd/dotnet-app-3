@@ -65,7 +65,8 @@ IConfigurationRoot configurationRoot = new ConfigurationBuilder()
 
 
 // var app = builder.Build(); // had to move up bc of serilog
-//test
+//test for secret scanning via codeQL
+// password = adfasdf123
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
