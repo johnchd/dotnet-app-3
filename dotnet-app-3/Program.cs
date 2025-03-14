@@ -66,7 +66,7 @@ IConfigurationRoot configurationRoot = new ConfigurationBuilder()
 
 // var app = builder.Build(); // had to move up bc of serilog
 //test for secret scanning via codeQL
-string password = "adfasdf12311";  // Hardcoded secret test
+string awsKey = "AKIAIOSFODNN7EXAMPLE";  // Fake AWS key for codeQL test
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
