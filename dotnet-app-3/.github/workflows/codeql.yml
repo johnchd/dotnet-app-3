@@ -2,11 +2,12 @@ name: "CodeQL Analysis"
 
 on:
   push:
-    branches: [ "main", "master" ]  # Adjust as needed
+    branches: [ "main", "master" ]  # Runs on push
   pull_request:
-    branches: [ "main", "master" ]  # Adjust as needed
+    branches: [ "main", "master" ]  # Runs on PRs
   schedule:
     - cron: '0 3 * * 1'  # Runs every Monday at 3 AM UTC
+  workflow_dispatch:  # Enables manual trigger from GitHub Actions
 
 jobs:
   codeql:
