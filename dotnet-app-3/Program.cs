@@ -65,6 +65,7 @@ IConfigurationRoot configurationRoot = new ConfigurationBuilder()
 
 
 // var app = builder.Build(); // had to move up bc of serilog
+//test
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
