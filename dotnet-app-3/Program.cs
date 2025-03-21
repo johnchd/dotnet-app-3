@@ -1,83 +1,61 @@
-using Serilog; // serilog
-using System; // serilog
-using System.IO; // serilog
-using Serilog.Formatting.Json; // serilog
+using Serilog;
+using System.IO;
+using Serilog.Formatting.Json;
 
+var builder = WebApplication.CreateBuilder(args);
 
-
-var builder = WebApplication.CreateBuilder(args); // main
-
-
+// Add services before Build
 builder.Services.AddOpenApi();
-builder.Services.AddControllers();
 builder.Services.AddHttpClient();
+builder.Services.AddControllers();
 
-// serilog
+// Serilog setup
 var logDirectory = "/tmp/logs";
 if (!Directory.Exists(logDirectory))
 {
     Directory.CreateDirectory(logDirectory);
 }
-// iteration 1 - basic
-// Log.Logger = new LoggerConfiguration()
-//     // .WriteTo.Console()
-//     .WriteTo.File(Path.Combine(logDirectory, "logs.txt"), rollingInterval: RollingInterval.Infinite) // 
-//     .Enrich.FromLogContext()
-//     .CreateLogger();
 
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()  // Logs to console
+    .WriteTo.Console()
     .WriteTo.File(
         Path.Combine(logDirectory, "logs-.txt"),
         rollingInterval: RollingInterval.Day,
         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}"
     )
     .WriteTo.File(
-        new JsonFormatter(), 
-        Path.Combine(logDirectory, "logs-.json"), 
-        rollingInterval: RollingInterval.Day 
+        new JsonFormatter(),
+        Path.Combine(logDirectory, "logs-.json"),
+        rollingInterval: RollingInterval.Day
     )
     .Enrich.FromLogContext()
-    .Enrich.WithProperty("Application", "dotnet-app-3") // Add application name
-    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName) // Add environment
-    .MinimumLevel.Information() 
-    .Filter.ByExcluding(log => log.MessageTemplate.Text.Contains("/favicon.ico")) // Ignore favicon.ico requests
+    .Enrich.WithProperty("Application", "dotnet-app-3")
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+    .MinimumLevel.Information()
+    .Filter.ByExcluding(log => log.MessageTemplate.Text.Contains("/favicon.ico"))
     .CreateLogger();
 
 builder.Host.UseSerilog();
-// var appSerilog = builder.Build();
-var app = builder.Build();
 
-app.UseSerilogRequestLogging(); // Logs HTTP requests
-
-
-
-// builder.Services.AddOpenApi();
-// builder.Services.AddControllers();
-// builder.Services.AddHttpClient();
-
-
-// env var - local vs docker
+// Env Configuration
 IConfigurationRoot configurationRoot = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
     .AddEnvironmentVariables()
-.Build();
+    .Build();
 
+// Build the app
+var app = builder.Build();
 
-// var app = builder.Build(); // had to move up bc of serilog
-//test for secret scanning via codeQL
-string awsKey = "AKIAIOSFODNN7EXAMPLE";  // Fake AWS key for codeQL test
-
+// Middleware pipeline
+app.UseSerilogRequestLogging();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-//attempt at auth
+// Middleware for API auth for BFF
 app.Use(async (context, next) =>
 {
-    // Check if the request is to an /api endpoint
     if (context.Request.Path.StartsWithSegments("/api"))
     {
-        // Try to get the custom header
         if (!context.Request.Headers.TryGetValue("X-Secret-Key", out var headerValue) ||
             headerValue != "test")
         {
@@ -89,18 +67,12 @@ app.Use(async (context, next) =>
     await next();
 });
 
+app.UseHttpsRedirection();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
-//test
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

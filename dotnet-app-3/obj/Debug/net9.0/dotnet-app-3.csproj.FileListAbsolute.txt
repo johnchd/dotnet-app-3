@@ -85,3 +85,11 @@
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.File.dll
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Serilog.Sinks.Seq.dll
 /Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/app/logs/logs.json
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/johncrynick/Documents/dotnet-projects/dotnet-app-3-1/dotnet-app-3/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
